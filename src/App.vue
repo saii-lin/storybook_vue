@@ -1,19 +1,44 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Button icon="filter" @click="showFilterModal">Filter</Button>
+    <FilterComponent :isShowFilterModal="isShowFilterModal" :filterData="filterData" title="hi"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import FilterComponent from "./components/Filter.vue";
+import { Button } from "ant-design-vue";
 export default {
-  name: 'App',
+  name: "App",
+  data() {
+    return {
+      isShowFilterModal: true,
+      filterData: [
+        {
+          value: 0,
+          text: 'Request id'
+        },
+        {
+          value: 1,
+          text: 'BU'
+        },
+        {
+          value: 2,
+          text: 'Date'
+        }
+      ]
+    };
+  },
   components: {
-    HelloWorld
-  }
-}
+    FilterComponent,
+    Button
+  },
+  methods: {
+    showFilterModal() {
+      this.isShowFilterModal = !this.isShowFilterModal;
+    },
+  },
+};
 </script>
 
 <style>
@@ -24,5 +49,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  padding: 50px 100px;
 }
 </style>

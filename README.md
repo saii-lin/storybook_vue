@@ -20,5 +20,10 @@ yarn build
 yarn lint
 ```
 
+### compiles and hot-reloads for storybook
+```
+yarn storybook
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

@@ -16,8 +16,8 @@ const Template = (args, { argTypes }) => ({
   template: '<AlertComponent v-bind="$props" />',
 });
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Alert = Template.bind({});
+Alert.args = {
   message: "Success Text",
   description: "This is a Success Text.",
   type: "success",

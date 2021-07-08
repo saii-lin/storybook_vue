@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <CommonButton @clickButton="showFilterModal" icon="filter" buttonText="click to show filter "/>
+    <CommonButton
+      @clickButton="showFilterModal"
+      icon="filter"
+      buttonText="click to show filter"
+      type="primary"
+    />
     <FilterComponent
       :isShowFilterModal="isShowFilterModal"
       :filterData="filterData"
@@ -28,38 +33,38 @@ export default {
       filterData: [
         {
           value: 0,
-          text: 'Request id'
+          text: "Request id",
         },
         {
           value: 1,
-          text: 'BU'
+          text: "BU",
         },
         {
           value: 2,
-          text: 'Date'
-        }
+          text: "Date",
+        },
       ],
       menuData: [
         {
-          url: 'https://antdv.com/components/dropdown-cn/',
-          name: 'dropdown'
+          url: "https://antdv.com/components/dropdown-cn/",
+          name: "dropdown",
         },
         {
-          url: 'https://storybook.js.org/docs/vue/essentials/actions',
-          name: 'storybook'
+          url: "https://storybook.js.org/docs/vue/essentials/actions",
+          name: "storybook",
         },
         {
-          url: 'https://cli.vuejs.org/guide/css.html#pre-processors',
-          name: 'vue precessor'
-        }
-      ]
+          url: "https://cli.vuejs.org/guide/css.html#pre-processors",
+          name: "vue precessor",
+        },
+      ],
     };
   },
   components: {
     FilterComponent,
     DropdownMenu,
     CommonButton,
-    CommonAlert
+    CommonAlert,
   },
   methods: {
     showFilterModal() {

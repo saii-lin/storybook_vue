@@ -15,6 +15,33 @@ module.exports = {
       loaders: ["style-loader", "css-loader", "sass-loader"],
       include: path.resolve(__dirname, "../")
     });
+    // TODO need to be resolve: customize theme
+    // config.module.rules.push(
+    //   {
+    //     test: /\.less$/,
+    //     use: [
+    //       require.resolve('style-loader'),
+    //       {
+    //         loader: require.resolve('css-loader'),
+    //         options: {
+    //           modules: true,
+    //           importLoaders: 1
+    //         },
+    //       },
+    //       {
+    //         loader: require.resolve('less-loader'), 
+    //         options: {
+    //           lessOptions: {
+    //             modifyVars: {
+    //               'primary-color': '#FD80AC',
+    //             },
+    //             javascriptEnabled: true
+    //           }
+    //         }
+    //       }
+    //     ]
+    //   },
+    // );
     // setup URL Alias
     config.resolve.alias = {
       ...config.resolve.alias,

@@ -47,11 +47,7 @@ export default {
     return {
       filterIndex: 0,
       filterSet: [0],
-      filterValue: [
-        {
-          value: 0
-        },
-      ]
+      filterValue: {"0": 0}
     }
   },
   methods: {
@@ -59,13 +55,14 @@ export default {
     addFilter() {
       this.filterIndex += 1;
       this.filterSet.push(this.filterIndex);
+      this.filterValue[`${this.filterIndex}`] = this.filterIndex;
     },
-    deleteFilter(index) {
+    deleteFilter(filterNum) {
       const deleteIndex = this.filterSet.findIndex((element) => {
-        return element === index
+        return element === filterNum
       })
       this.filterSet.splice(deleteIndex, 1)
-      console.log(this.filterSet)
+      delete this.filterValue[`${filterNum}`]
     }
   },
 };

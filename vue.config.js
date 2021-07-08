@@ -8,7 +8,6 @@ module.exports = {
   chainWebpack: (config) => {
     // 添加别名
     config.resolve.alias.set('@', resolve('src/'));
-    // config.resolve.alias.set('raf', resolve('node_modules/raf/'))
   },
   css: {
     extract: false,
@@ -20,6 +19,16 @@ module.exports = {
         @import "@/assets/scss/base/_color.scss";
         `,
       },
+      // TODO need to be resolve: customize theme
+      // less: {
+      //   // 改 ant design 主題色
+      //   lessOptions: {
+      //     modifyVars: {
+      //       'primary-color': '#FD80AC',
+      //     },
+      //     javascriptEnabled: true,
+      //   },
+      // },
     },
   },
 }

@@ -1,8 +1,8 @@
-import DropdownMenu from '@/components/DropdownMenu.vue';
+import DropdownMenuComponent from '@/components/DropdownMenu.vue';
 
 export default {
   title: 'Component/DropdownMenu',
-  component: DropdownMenu,
+  component: DropdownMenuComponent,
   argTypes: {
     title: { control: 'text' },
     dropdownIcon: { control: { type: 'select', options: ['down', 'down-circle', 'caret-down'] }}
@@ -11,12 +11,12 @@ export default {
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { DropdownMenu },
-  template: '<DropdownMenu v-bind="$props" />',
+  components: { DropdownMenuComponent },
+  template: '<DropdownMenuComponent v-bind="$props" />',
 });
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const DropdownMenu = Template.bind({});
+DropdownMenu.args = {
   title: "Hover me!",
   dropdownIcon: "down",
   menuData: [

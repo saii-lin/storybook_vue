@@ -15,8 +15,8 @@ const Template = (args, { argTypes }) => ({
   template: '<FilterComponent v-bind="$props" />',
 });
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Filter = Template.bind({});
+Filter.args = {
   filterData: [
     {
       value: 0,

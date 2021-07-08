@@ -20,9 +20,19 @@ yarn build
 yarn lint
 ```
 
-### compiles and hot-reloads for storybook
+### compiles and hot-reloads for Storybook
 ```
 yarn storybook
+```
+
+### Build Storybook as a static web application
+```
+yarn build-storybook -o ./path/to/build
+```
+
+### running web application Storybook on local
+```
+npx http-server ./path/to/build
 ```
 
 ### Customize configuration

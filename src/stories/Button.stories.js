@@ -8,13 +8,14 @@ export default {
     type: { control: { type: 'select', options: ['primary', 'default', 'danger'] } },
     shape: { control: { type: 'select', options: ['default', 'circle', 'round'] } },
     disable: { control: Boolean },
+    clickButtonHandler: { action: 'clicked' }
   },
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { ButtonComponent },
-  template: '<ButtonComponent @clickButton="onClick" v-bind="$props" />',
+  template: '<ButtonComponent @clickButton="clickButtonHandler" v-bind="$props" />',
 });
 
 export const Type = Template.bind({});

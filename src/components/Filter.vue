@@ -15,7 +15,7 @@
               >{{ item.text }}</Option
             >
           </Select>
-          <Input class="filter__value__body__item__input" placeholder="Value" :value="filterValue[`${filter}`].value" />
+          <Input class="filter__value__body__item__input" placeholder="Value" :value="filterValue[`${filter}`].value" @change="$emit('inputChange', filterValue)" />
           <Button class="filter__value__body__item__button" icon="delete" @click="deleteFilter(filter)" />
         </div>
         <Button class="filter__value__body__plus__button" icon="plus" @click="addFilter">

@@ -5,18 +5,18 @@ export default {
   component: FilterComponent,
   argTypes: {
     title: { control: 'text' },
-
+    inputChange: { action: 'inputChange'}
   },
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { FilterComponent },
-  template: '<FilterComponent v-bind="$props" />',
+  template: '<FilterComponent v-bind="$props" @inputChange="inputChange" />',
 });
 
-export const Filter = Template.bind({});
-Filter.args = {
+export const Default = Template.bind({});
+Default.args = {
   filterData: [
     {
       value: 0,

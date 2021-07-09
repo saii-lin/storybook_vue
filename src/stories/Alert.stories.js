@@ -4,7 +4,7 @@ export default {
   title: 'Component/Alert',
   component: AlertComponent,
   argTypes: {
-    type: { control: { type: 'select', options: ['success', 'info', 'warn', 'error'] } },
+    type: { control: { type: 'select', options: ['success', 'info', 'warning', 'error'] } },
     message: { control: 'text' },
     description: { control: 'text'}
   },
@@ -16,8 +16,8 @@ const Template = (args, { argTypes }) => ({
   template: '<AlertComponent v-bind="$props" />',
 });
 
-export const Alert = Template.bind({});
-Alert.args = {
+export const Default = Template.bind({});
+Default.args = {
   message: "Success Text",
   description: "This is a Success Text.",
   type: "success",

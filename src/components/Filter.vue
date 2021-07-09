@@ -70,13 +70,13 @@ export default {
 <style lang="scss" scoped>
 .filter__value {
   &__wrapper {
-    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.1);;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: $box-shadow;
+    border-radius: $box-radius;
+    border: $box-border;
     width: 500px;
   }
   &__title {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: $box-border;
     padding: 20px;
     font-size: 1.25rem;
     text-align: left;

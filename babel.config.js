@@ -5,9 +5,7 @@ module.exports = {
   plugins: [
     [
       "import",
-      { libraryName: "ant-design-vue", libraryDirectory: "es", style: "css" }
-      // TODO need to be resolve: customize theme
-      // { libraryName: "ant-design-vue", libraryDirectory: "es", style: true }
+      { libraryName: "ant-design-vue", libraryDirectory: "es", style: true }
     ]
   ]
 }

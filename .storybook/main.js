@@ -10,38 +10,46 @@ module.exports = {
   ],
   webpackFinal: async (config, { configType }) => {
     // allow SCSS
-    config.module.rules.push({
-      test: /\.scss$/,
-      loaders: ["style-loader", "css-loader", "sass-loader"],
-      include: path.resolve(__dirname, "../")
-    });
-    // TODO need to be resolve: customize theme
-    // config.module.rules.push(
-    //   {
-    //     test: /\.less$/,
-    //     use: [
-    //       require.resolve('style-loader'),
-    //       {
-    //         loader: require.resolve('css-loader'),
-    //         options: {
-    //           modules: true,
-    //           importLoaders: 1
-    //         },
-    //       },
-    //       {
-    //         loader: require.resolve('less-loader'), 
-    //         options: {
-    //           lessOptions: {
-    //             modifyVars: {
-    //               'primary-color': '#FD80AC',
-    //             },
-    //             javascriptEnabled: true
-    //           }
-    //         }
-    //       }
-    //     ]
-    //   },
-    // );
+    // config.module.rules.push({
+    //   test: /\.scss$/,
+    //   loaders: ["style-loader", "css-loader", "sass-loader"],
+    //   include: path.resolve(__dirname, "../"),
+    // });
+    config.module.rules.push(
+      {
+        test: /\.(scss)$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              additionalData: `
+              @import "@/assets/scss/base/_color.scss";
+              `,
+            }
+          }
+        ]
+      },
+      // TODO need to be resolve: customize theme
+      {
+        test: /\.less$/,
+        use: [
+          'style-loader','css-loader',
+          {
+            loader: 'less-loader', 
+            options: {
+              lessOptions: {
+                modifyVars: {
+                  'primary-color': '#FD80AC',
+                },
+                javascriptEnabled: true,
+              },
+            }
+          }
+        ]
+      },
+    ),
     // setup URL Alias
     config.resolve.alias = {
       ...config.resolve.alias,

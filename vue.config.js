@@ -20,15 +20,15 @@ module.exports = {
         `,
       },
       // TODO need to be resolve: customize theme
-      // less: {
-      //   // 改 ant design 主題色
-      //   lessOptions: {
-      //     modifyVars: {
-      //       'primary-color': '#FD80AC',
-      //     },
-      //     javascriptEnabled: true,
-      //   },
-      // },
+      less: {
+        // 改 ant design 主題色
+        lessOptions: {
+          modifyVars: {
+            'primary-color': '#FD80AC',
+          },
+          javascriptEnabled: true,
+        },
+      },
     },
   },
 }

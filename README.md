@@ -27,7 +27,7 @@ yarn storybook
 
 ### Build Storybook as a static web application
 ```
-yarn build-storybook -o ./path/to/build
+yarn build-storybook
 ```
 
 ### running web application Storybook on local

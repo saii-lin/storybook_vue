@@ -1,30 +1,18 @@
 <template>
   <div id="app">
-    <CommonButton
-      @clickButton="showFilterModal"
-      icon="filter"
-      buttonText="click to show filter"
-      type="primary"
-    />
-    <FilterComponent
-      :isShowFilterModal="isShowFilterModal"
-      :filterData="filterData"
-      title="hi"
-    />
-    <DropdownMenu
-      title="a menu"
-      dropdownIcon="down-circle"
-      :menuData="menuData"
-    />
-    <CommonAlert />
+    <common-components-auth-modal></common-components-auth-modal>
+
+    <common-components-common-alert></common-components-common-alert>
+
+    <common-components-common-button></common-components-common-button>
+
+    <common-components-dropdown-menu :menuData="menuData"></common-components-dropdown-menu>
+
+    <common-components-filter :isShowFilterModal="isShowFilterModal" :filterData="filterData"></common-components-filter>
   </div>
 </template>
 
 <script>
-import FilterComponent from "@/components/Filter.vue";
-import DropdownMenu from "@/components/DropdownMenu.vue";
-import CommonButton from "@/components/CommonButton.vue";
-import CommonAlert from "@/components/CommonAlert.vue";
 export default {
   name: "App",
   data() {
@@ -60,12 +48,7 @@ export default {
       ],
     };
   },
-  components: {
-    FilterComponent,
-    DropdownMenu,
-    CommonButton,
-    CommonAlert,
-  },
+  components: {},
   methods: {
     showFilterModal() {
       this.isShowFilterModal = !this.isShowFilterModal;

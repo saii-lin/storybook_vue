@@ -34,6 +34,11 @@ export default {
         password: ''
       }
     }
+  },
+  methods: {
+    handleSubmit() {
+      console.log('submit')
+    }
   }
 }
 </script>

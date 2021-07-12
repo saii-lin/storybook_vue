@@ -10,6 +10,9 @@ export default {
     disable: { control: Boolean },
     clickButtonHandler: { action: 'clicked' }
   },
+  args: {
+    buttonText: 'Sample Button'
+  }
 };
 
 const Template = (args, { argTypes }) => ({
@@ -20,30 +23,28 @@ const Template = (args, { argTypes }) => ({
 
 export const Type = Template.bind({});
 Type.args = {
-  type: 'primary',
-  buttonText: 'Button'
+  type: 'primary'
 };
 
 export const Default = Template.bind({});
 Default.args = {
-  buttonText: 'Button',
+  type: 'default'
 };
 
 export const IconButton = Template.bind({});
 IconButton.args = {
+  ...Default.args,
   icon: 'question-circle',
-  buttonText: 'Button',
 };
 
 export const Shape = Template.bind({});
 Shape.args = {
-  shape: 'circle',
-  buttonText: 'Button',
+  ...Default.args,
+  shape: 'round',
 };
 
 export const Loading = Template.bind({});
 Loading.args = {
+  ...Default.args,
   loading: true,
-  type: 'primary',
-  buttonText: 'Button',
 };

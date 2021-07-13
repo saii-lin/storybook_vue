@@ -1,11 +1,13 @@
 # common-components
-#### 
-  Welcome to common UI library demo. You can run
-  `yarn build-storybook`
-  or
-  `npm build-storybook`
-  in your command-line and open Storybook for more info.
-## Project setup
+  ✋🏼 Welcome to common UI library demo. Below is steps to setup the project fast 🎉 <br>
+  🥺 npm user please replace yarn with npm.
+  ```
+  1. yarn install
+  2. yarn prod
+  3. yarn build-storybook (to watch storybook as a as a static web application)
+  4. yarn serve (to watch components in application)
+  ```
+### Project setup
 ```
 yarn install
 ```
@@ -17,7 +19,7 @@ yarn serve
 
 ### Compiles and minifies for production
 ```
-yarn build
+yarn prod
 ```
 
 ### Lints and fixes files
@@ -25,7 +27,7 @@ yarn build
 yarn lint
 ```
 
-### compiles and hot-reloads for Storybook
+### Compiles and hot-reloads for Storybook
 ```
 yarn storybook
 ```
@@ -34,11 +36,3 @@ yarn storybook
 ```
 yarn build-storybook
 ```
-
-### running web application Storybook on local
-```
-npx http-server ./path/to/build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

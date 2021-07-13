@@ -16,6 +16,7 @@
 <script>
 import { Dropdown, Icon, Menu } from "ant-design-vue";
 export default {
+  name: 'DropdownMenu',
   props: {
     menuData: {
       type: Array,

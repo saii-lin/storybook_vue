@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
+import commonComponent from '../dist/commonComponents.common.js'
 
-window.Vue = Vue;
-require('../dist/common-components.js');
+Vue.use(commonComponent)
 
 Vue.config.productionTip = false
 

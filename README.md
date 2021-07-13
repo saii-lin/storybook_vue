@@ -1,5 +1,10 @@
 # common-components
-
+#### 
+  Welcome to common UI library demo. You can run
+  `yarn build-storybook`
+  or
+  `npm build-storybook`
+  in your command-line and open Storybook for more info.
 ## Project setup
 ```
 yarn install

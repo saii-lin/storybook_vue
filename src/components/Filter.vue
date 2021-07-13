@@ -29,6 +29,7 @@
 import { Button, Select, Input } from "ant-design-vue";
 
 export default {
+  name: 'CommonFilter',
   props: {
     isShowFilterModal: {
       type: Boolean,

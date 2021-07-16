@@ -10,7 +10,8 @@
     "prod": "vue-cli-service build --target lib --name commonComponents ./src/components/index.js",
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook  -o ./path/to/build"
+    "build storybook": "build-storybook  -o ./path/to/build",
+    "open storybook": "npx http-server ./path/to/build"
   },
   "dependencies": {
     "ant-design-vue": "^1.7.6",

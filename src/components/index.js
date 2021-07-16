@@ -5,6 +5,7 @@ import CommonCard from './CommonCard.vue'
 import DropdownMenu from './DropdownMenu.vue'
 import CommonFilter from './Filter.vue'
 import TextDetail from './TextDetail.vue'
+import CommonSider from './Sider.vue'
 
 const componentList = [
   AuthModal, 
@@ -13,7 +14,8 @@ const componentList = [
   CommonCard, 
   DropdownMenu, 
   CommonFilter, 
-  TextDetail
+  TextDetail,
+  CommonSider
 ]
 
 const install = function(Vue) {

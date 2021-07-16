@@ -4,8 +4,9 @@
   ```
   1. yarn install
   2. yarn prod
-  3. yarn build-storybook (to watch storybook as a as a static web application)
+  3. yarn build storybook (to build storybook as a as a static web application)
   4. yarn serve (to watch components in application)
+  5. yarn open storybook (to watch storybook in application)
   ```
 ### Project setup
 ```
@@ -35,4 +36,9 @@ yarn storybook
 ### Build Storybook as a static web application
 ```
 yarn build-storybook
+```
+
+### Open Storybook web application
+```
+npx http-server ./path/to/build
 ```

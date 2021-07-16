@@ -1,9 +1,20 @@
 <template>
   <div id="app">
     <h1>Simple demo for common UI library</h1>
-    <h3>Welcome to common UI library demo. You can run <br><b>yarn build-storybook</b><br> or <br><b>npm build-storybook</b><br>
-    in your command-line and open Storybook for more info.</h3>
-    <div class="seperator">AuthModal</div>
+    <h3>
+      Welcome to common UI library demo. You can run <br /><b
+        >yarn build-storybook</b
+      ><br />
+      or <br /><b>npm build-storybook</b><br />
+      in your command-line and open Storybook for more info.
+    </h3>
+    <div class="seperator">Sider</div>
+    <common-button
+      @clickButton="clickSiderControl"
+      buttonText="click to hide/show sider"
+    />
+    <common-sider :siderData="siderData" :collapsed="siderCollapsed" />
+    <!-- <div class="seperator">AuthModal</div>
     <auth-modal @clickButton="clickAuthButton" />
     <div class="seperator">CommonCard and TextDetail</div>
     <common-card :detail="cardDetail"
@@ -12,15 +23,21 @@
     <div class="seperator">CommonAlert</div>
     <common-alert />
     <div class="seperator">CommonButton</div>
-    <common-button @clickButton="clickFilterControl" buttonText="click to hide/show filter" />
+    <common-button
+      @clickButton="clickFilterControl"
+      buttonText="click to hide/show filter"
+    />
     <div class="seperator" v-show="isShowFilterModal">CommonFilter</div>
-    <common-filter :isShowFilterModal="isShowFilterModal" :filterData="filterData" />
+    <common-filter
+      :isShowFilterModal="isShowFilterModal"
+      :filterData="filterData"
+    />
     <div class="seperator">DropDownMenu</div>
     <dropdown-menu
       :menuData="menuData"
       dropdownIcon="caret-down"
       title="Hover and open"
-    />
+    /> -->
   </div>
 </template>
 
@@ -30,6 +47,7 @@ export default {
   data() {
     return {
       isShowFilterModal: true,
+      siderCollapsed: false,
       filterData: [
         {
           value: 0,
@@ -67,6 +85,34 @@ export default {
         imageSrc:
           "https://a0.muscache.com/im/pictures/5a647313-052f-48bd-873d-00094e3cb96a.jpg?im_w=480",
       },
+      siderData: [
+        {
+          icon: "user",
+          name: "Member",
+          to: "/Member",
+        },
+        {
+          icon: "pie-chart",
+          name: "Chart",
+          to: "/Chart",
+        },
+        {
+          icon: "block",
+          name: "Product",
+          child: [
+            {
+              icon: null,
+              name: "Product 1",
+              to: "/Product1",
+            },
+            {
+              icon: null,
+              name: "Product 2",
+              to: "/Product2",
+            },
+          ],
+        },
+      ],
     };
   },
   methods: {
@@ -79,6 +125,9 @@ export default {
     clickFilterControl() {
       this.isShowFilterModal = !this.isShowFilterModal;
     },
+    clickSiderControl() {
+      this.siderCollapsed = !this.siderCollapsed
+    }
   },
 };
 </script>

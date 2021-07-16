@@ -10,11 +10,6 @@ module.exports = {
   ],
   webpackFinal: async (config, { configType }) => {
     // allow SCSS
-    // config.module.rules.push({
-    //   test: /\.scss$/,
-    //   loaders: ["style-loader", "css-loader", "sass-loader"],
-    //   include: path.resolve(__dirname, "../"),
-    // });
     config.module.rules.push(
       {
         test: /\.(scss)$/,
@@ -31,7 +26,7 @@ module.exports = {
           }
         ]
       },
-      // TODO need to be resolve: customize theme
+      // ant-design customize theme
       {
         test: /\.less$/,
         use: [
@@ -41,7 +36,7 @@ module.exports = {
             options: {
               lessOptions: {
                 modifyVars: {
-                  'primary-color': '#FD80AC',
+                  // 'primary-color': '#FD80AC',
                 },
                 javascriptEnabled: true,
               },
@@ -55,8 +50,6 @@ module.exports = {
       ...config.resolve.alias,
       "@": path.resolve(__dirname, "../src")
     };
-
-    // Return the altered config
     return config;
   },
 }

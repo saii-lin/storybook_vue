@@ -19,12 +19,12 @@ module.exports = {
         @import "@/assets/scss/base/_color.scss";
         `,
       },
-      // TODO need to be resolve: customize theme
+      // ant-design customize theme
       less: {
         // 改 ant design 主題色
         lessOptions: {
           modifyVars: {
-            'primary-color': '#FD80AC',
+            // 'primary-color': '#FD80AC',
           },
           javascriptEnabled: true,
         },
